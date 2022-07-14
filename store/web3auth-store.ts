@@ -43,17 +43,17 @@ export const web3auth_chain_config = {
   } as CustomChainConfig,
 } as const 
 
-export interface Web3AuthWalletProvider {
-  getAccounts: () => Promise<any>
-  getBalance: () => Promise<any>
-  signAndSendTransaction: () => Promise<void>
-  signTransaction: () => Promise<void>
-  signMessage: () => Promise<void>
-}
+// export interface Web3AuthWalletProvider {
+//   getAccounts: () => Promise<any>
+//   getBalance: () => Promise<any>
+//   signAndSendTransaction: () => Promise<void>
+//   signTransaction: () => Promise<void>
+//   signMessage: () => Promise<void>
+// }
 
 export type Web3AuthState = {
   web3auth: any | null
-  web3auth_provider: Web3AuthWalletProvider | null
+  // web3auth_provider: Web3AuthWalletProvider | null
   web3auth_loading: boolean
   web3auth_chain: string
   web3auth_user: unknown
@@ -75,7 +75,7 @@ export type Web3AuthStore = Web3AuthState & Web3AuthActions
 
 const defaultWeb3AuthState: Web3AuthState = {
   web3auth: null,
-  web3auth_provider: null,
+  // web3auth_provider: null,
   web3auth_loading: false,
   web3auth_chain: '',
   web3auth_user: {},
@@ -91,7 +91,7 @@ const subscribeToWeb3AuthEvents = (web3auth: Web3Auth, set: SetState<AppStore>) 
 
   web3auth.on(ADAPTER_EVENTS.DISCONNECTED, () => {
     console.log('disconnected')
-    set({ web3auth_user: null, web3auth_provider: null })
+    set({ web3auth_user: null })
   })
 
   web3auth.on(ADAPTER_EVENTS.ERRORED, (error: unknown) =>
@@ -114,10 +114,8 @@ export const createWeb3AuthSlice: StoreSlice<Web3AuthStore> = (set, get) => ({
       authMode: 'DAPP',
     })
 
-
     // Subscribe to ADAPTER_EVENTS and LOGIN_MODAL_EVENTS
     subscribeToWeb3AuthEvents(web3auth, set)
-
 
     // const openloginAdapter = new OpenloginAdapter({
     //   adapterSettings: {

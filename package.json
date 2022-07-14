@@ -6,14 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma-gen": "prisma db pull && prisma generate",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
+    "theme-gen": "node ./scripts/theme-gen.js"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.8.0",
+    "@prisma/client": "^4.0.0",
+    "@sentry/browser": "^7.6.0",
+    "@web3auth/base": "^1.1.1",
+    "@web3auth/web3auth": "^1.1.1",
+    "auto-zustand-selectors-hook": "^1.0.1",
+    "axios": "^0.27.2",
+    "buttercms": "^1.2.9",
+    "cloudinary": "^1.30.0",
+    "decimal.js": "^10.3.1",
+    "env-var": "^7.1.1",
+    "moment": "^2.29.4",
     "next": "12.2.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.33.1",
+    "simple-zustand-devtools": "^1.1.0",
+    "zod": "^3.17.3",
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
+    "@sentry/types": "^7.6.0",
     "@types/node": "18.0.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",

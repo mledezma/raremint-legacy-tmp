@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model assets {
+  asset_id           Int
+  marketplace_id     Int?
+  name               String
+  description        String
+  external_url       String
+  image              String
+  owner_of           String?
+  tier               String
+  edition_max_value  Int?
+  edition_value      Int?
+  asset_backed       Boolean
+  category           String
+  subject            String?
+  team               String?
+  authenticator      String?
+  auth_type          String?
+  grade              String?
+  asset_type         String?
+  provenance_photos  Json?          @default("[]")
+  created_at         DateTime?      @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime?      @default(now()) @db.Timestamptz(6)
+  creation_date      String?
+  usd_price          Decimal        @default(0) @db.Decimal
+  token_price        Decimal        @default(0) @db.Decimal
+  available_quantity Int            @default(0)
+  animation_url      String
+  contract_address   String         @default("invalid")
+  asset_uri          String         @id
+  chain              String?        @default("Ethereum")
+  chain_id           String         @default("0x1")
+  favorites          favorites[]
+  transactions       transactions[]
+}
+
+model favorites {
+  user_address String
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  asset_uri    String
+  assets       assets   @relation(fields: [asset_uri], references: [asset_uri], onUpdate: Restrict)
+
+  @@id([user_address, asset_uri])
+}
+
+model homepage {
+  version         String @id
+  hero_asset      String
+  popular_assets  Json
+  latest_releases Json
+}
+
+model leaderboard {
+  username String @id
+  position Int
+}
+
+model accounts {
+  address      String         @id(map: "profiles_pkey")
+  username     String?        @unique
+  email        String?
+  twitter      String?
+  eth_balance  Decimal        @default(0) @db.Decimal
+  usd_balance  Decimal        @default(0) @db.Decimal
+  avatar       String?
+  created_at   DateTime?      @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime?      @default(now()) @db.Timestamptz(6)
+  transactions transactions[]
+}
+
+model prices {
+  pair       String    @id
+  updated_at DateTime? @default(now()) @db.Timestamptz(6)
+  price      Decimal   @default(0) @db.Decimal
+}
+
+model transactions {
+  hash      String   @id
+  status    String   @default("validating")
+  receipt   Json?
+  signer    String
+  chain     String?
+  asset_uri String?
+  assets    assets?  @relation(fields: [asset_uri], references: [asset_uri], onDelete: Restrict, onUpdate: Restrict)
+  accounts  accounts @relation(fields: [signer], references: [address], onUpdate: Restrict)
+}

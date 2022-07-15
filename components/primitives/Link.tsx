@@ -22,9 +22,9 @@ export const Link = (props: React.RefAttributes<HTMLAnchorElement> & NavProps) =
   const internal = /^\/(?!\/)/.test(props.href);
   return internal ? (
     <NextLink {...props} passHref>
-      <a>
+      <CustomLink>
         {props.children}
-      </a>
+      </CustomLink>
     </NextLink>
   ) : (
     <CustomLink

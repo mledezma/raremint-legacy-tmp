@@ -38,7 +38,7 @@ const MobileNavMenuOption = (nav_option: NavOption) => {
             <>
               {nav_option.nav_key === 'account' && user?.avatar ? (
                 <Box css={{ pr: '$small' }}>
-                  <Image variant="avatar" src={user.avatar} />
+                  <Image variant="avatar" src={user.avatar} alt="Avatar Image"/>
                 </Box>
               ) : (
                 <nav_option.Icon connected={Boolean(user).toString()} />

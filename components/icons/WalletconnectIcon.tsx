@@ -1,4 +1,4 @@
-export const WalletconnectIcon = (props: any) => (
+export const WalletconnectIcon = () => (
   <svg
     width="28"
     height="20"

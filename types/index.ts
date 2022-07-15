@@ -135,6 +135,7 @@ export interface Asset extends assets {
   total_likes: number
   sold_out: boolean
   user_owned: boolean
+  asset_uri?: string
 }
 
 // ==================== News / Articles  ====================

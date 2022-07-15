@@ -12,6 +12,7 @@
     "theme-gen": "node ./scripts/theme-gen.js"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.4.1",
     "@cloudinary/url-gen": "^1.8.0",
     "@prisma/client": "^4.0.0",
     "@sentry/browser": "^7.6.0",
@@ -25,11 +26,14 @@
     "cloudinary": "^1.30.0",
     "decimal.js": "^10.3.1",
     "env-var": "^7.1.1",
+    "framer-motion": "^6.5.1",
     "moment": "^2.29.4",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.33.1",
+    "react-icons": "^4.4.0",
+    "react-number-format": "^4.9.3",
     "react-use": "^17.4.0",
     "simple-zustand-devtools": "^1.1.0",
     "zod": "^3.17.3",

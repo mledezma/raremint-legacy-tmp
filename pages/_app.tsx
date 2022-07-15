@@ -3,8 +3,9 @@ import { useStore } from '~/store'
 import { useLocation } from 'react-use'
 import React, { useEffect } from 'react'
 import { isBrowser } from '~/library/utils'
+import { Layout } from '~/components/layout/Layout'
 
-// NOTE: we are only using zustand on the client side for sharing state between components and ease optimistic ui updates. 
+// NOTE: we are only using zustand on the client side for sharing state between components and ease optimistic ui updates.
 //       we are not doing any hydration of the store from the server as in here. https://bit.ly/3uSGsm . its not necessary at the moment.
 if (isBrowser && !useStore.getState().zustand_initialized) {
   useStore.setState({
@@ -20,7 +21,7 @@ if (isBrowser && !useStore.getState().zustand_initialized) {
 function MyApp({ Component, pageProps }: AppProps) {
   const location = useLocation()
   const store = useStore()
-      
+
   // update the eth price every time you change url
   useEffect(() => {
     useStore.getState().syncEthPrice()
@@ -28,10 +29,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // log the store state on every update
   useEffect(() => {
-    console.log('✓ zustand state updated', JSON.parse(JSON.stringify(useStore.getState())))
+    if (!useStore.getState()) console.log('✓ zustand state updated', JSON.parse(JSON.stringify(useStore.getState())))
   }, [store])
 
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default MyApp

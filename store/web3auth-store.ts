@@ -105,34 +105,26 @@ export const createWeb3AuthSlice: StoreSlice<Web3AuthStore> = (set, get) => ({
   web3authInit: async () => {
     console.log('🔑 initializing web3auth ...')
     const { Web3Auth } = await import('@web3auth/web3auth')
-    const { OpenloginAdapter } = await import('@web3auth/openlogin-adapter')
 
     // instantiate and initialize web3auth client
     const web3auth = new Web3Auth({
       clientId : 'BGg06C3u5cKtQ8pY3sANCcwZe30Ch8qz7xbbd-1RAQsUBPeZThjuG6EH6qeTaBB-VKdii-oeOvp2uemQcHBNxKY',
       chainConfig: { chainNamespace: 'eip155', chainId: '0x3' },
       authMode: 'DAPP',
+      uiConfig: {
+        theme: 'dark',
+        loginMethodsOrder: ['google', 'twitter', 'apple', 'email_passwordless']
+      }
     })
 
-    // Subscribe to ADAPTER_EVENTS and LOGIN_MODAL_EVENTS
+    // subscribe to ADAPTER_EVENTS and LOGIN_MODAL_EVENTS
     subscribeToWeb3AuthEvents(web3auth, set)
-
-    // const openloginAdapter = new OpenloginAdapter({
-    //   adapterSettings: {
-    //     network: 'testnet',
-    //     clientId,
-    //     uxMode: 'popup',
-    //   },
-    // })
-
-    // web3auth.configureAdapter(openloginAdapter)
-
     web3auth.initModal()
 
     set({ web3auth: web3auth })
     console.log('🔑 web3auth initialized!')
   },
-  web3authLogin: async () => get().web3auth.initModal(),
+  web3authLogin: async () => get().web3auth.connect(),
   web3authLogout: async () => {},
   web3authGetUserInfo: async () => {},
   web3authGetAccounts: async () => {},

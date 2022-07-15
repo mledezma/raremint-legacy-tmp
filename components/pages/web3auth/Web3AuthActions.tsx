@@ -1,10 +1,10 @@
 
 import { useStore } from '~/store'
 
-
 export const Web3AuthActions = () => {
   const { web3authLogin, web3authLogout, web3authGetUserInfo, web3authGetAccounts, web3authGetBalance, web3authSignMessage, web3authSignTransaction, web3authSignAndSendTransaction, web3auth } = useStore();
 
+  console.log('Web3AuthActions', {web3auth})
   const loggedInView = (
     <>
       <button onClick={web3authGetUserInfo}>

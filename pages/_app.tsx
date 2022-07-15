@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // log the store state on every update
   useEffect(() => {
-    console.log('✓ zustand state updated', useStore.getState())
+    console.log('✓ zustand state updated', JSON.parse(JSON.stringify(useStore.getState())))
   }, [store])
 
   return <Component {...pageProps} />

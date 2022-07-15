@@ -50,4 +50,3 @@ if (isBrowser) setTimeout(() => mountStoreDevtool('AppStore', useStore as any), 
 
 // typescrpt selector hooks: https://bit.ly/3fbBHfo
 // export const useStore = createSelectorHooks<AppStore>(useStoreBase)   this breaks TypeScript
-

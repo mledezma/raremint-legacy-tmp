@@ -132,7 +132,7 @@ export const createWeb3AuthSlice: StoreSlice<Web3AuthStore> = (set, get) => ({
     set({ web3auth: web3auth })
     console.log('🔑 web3auth initialized!')
   },
-  web3authLogin: async () => {},
+  web3authLogin: async () => get().web3auth.initModal(),
   web3authLogout: async () => {},
   web3authGetUserInfo: async () => {},
   web3authGetAccounts: async () => {},

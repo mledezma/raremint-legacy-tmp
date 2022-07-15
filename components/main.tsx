@@ -1,5 +1,4 @@
 
-import styles from "../styles/Home.module.css";
 import { useStore } from '../store'
 
 
@@ -23,7 +22,7 @@ const Main = () => {
       <button onClick={web3authSignTransaction}>
           Sign Transaction
       </button>
-      
+
       <button onClick={web3authSignAndSendTransaction}>
         Sign and Send Transaction
       </button>

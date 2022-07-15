@@ -1,0 +1,400 @@
+{
+  "name": "default",
+  "colors": [
+    {
+      "name": "marketplace-filter-panel-bg",
+      "value": "#2d293d80"
+    },
+    {
+      "name": "overlay-bg-color",
+      "value": "#33394466"
+    },
+    {
+      "name": "homepage-headings",
+      "value": "#eff9ff"
+    },
+    {
+      "name": "buy-now-button-bg",
+      "value": "#853259"
+    },
+    {
+      "name": "dropdown-bg-button-color",
+      "value": "#49343b"
+    },
+    {
+      "name": "drop-down-selection-color-behind-text",
+      "value": "#828282"
+    },
+    {
+      "name": "marketplace-text",
+      "value": "#ababab"
+    },
+    {
+      "name": "marketplace-icons",
+      "value": "#87828a"
+    },
+    {
+      "name": "marketplace-icon-logo-on-cards",
+      "value": "#74c7b7"
+    },
+    {
+      "name": "seafoam",
+      "value": "#c9e3ca"
+    },
+    {
+      "name": "marketplace-usd-color",
+      "value": "#a8a8a8"
+    },
+    {
+      "name": "pop-up-dialogue-bg-color-100-opaque",
+      "value": "#131313"
+    },
+    {
+      "name": "card-bg-dark-grey",
+      "value": "#47484e80"
+    },
+    {
+      "name": "share-and-like",
+      "value": "#9f9f9f"
+    },
+    {
+      "name": "default-text-accentuate-color",
+      "value": "#ffd775"
+    },
+    {
+      "name": "navbar-submenu-bg",
+      "value": "#383838"
+    },
+    {
+      "name": "nav-bar-submenu-rollover",
+      "value": "#fbb538"
+    },
+    {
+      "name": "text-links-and-metadata-panel-contract-address-link-text-color",
+      "value": "#ffe08c"
+    },
+    {
+      "name": "crypto-connect",
+      "value": "#7b003b"
+    },
+    {
+      "name": "submenu-item-divider-line",
+      "value": "#585858"
+    },
+    {
+      "name": "navbar-submenu-inactive",
+      "value": "#7c7c7c"
+    },
+    {
+      "name": "metadata-panels-top-bg",
+      "value": "#29292e"
+    },
+    {
+      "name": "dropdown-text-color",
+      "value": "#c1c0c0"
+    },
+    {
+      "name": "marketplace-filter-icons-buttons-and-text",
+      "value": "#dbb988"
+    },
+    {
+      "name": "no-decline-or-inactive-button",
+      "value": "#414141"
+    },
+    {
+      "name": "marketplace-buttons",
+      "value": "#a50351"
+    },
+    {
+      "name": "filter-buttons-color",
+      "value": "#6782e2"
+    },
+    {
+      "name": "footer-signup-button",
+      "value": "#604287"
+    },
+    {
+      "name": "page-background-color",
+      "value": "#151515"
+    },
+    {
+      "name": "marketplace-filter-button",
+      "value": "#90a8fe"
+    },
+    {
+      "name": "pokemon-drop-mint-and-unwrap-button",
+      "value": "#cb0866"
+    },
+    {
+      "name": "orange-button",
+      "value": "#cf7c00"
+    },
+    {
+      "name": "marketplace-le-icon",
+      "value": "#9da3ea"
+    },
+    {
+      "name": "pokemon-drop-text-accentuated",
+      "value": "#ebd594"
+    },
+    {
+      "name": "pokemon-drop-no-button",
+      "value": "#585858"
+    },
+    {
+      "name": "overlay-dialogue-text",
+      "value": "#ffffff"
+    },
+    {
+      "name": "descriptions-default-grey",
+      "value": "#e8e8e8"
+    },
+    {
+      "name": "details-default-grey",
+      "value": "#bababa"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "like",
+      "value": "#e1001b"
+    },
+    {
+      "name": "sold-asset",
+      "value": "#565656"
+    },
+    {
+      "name": "marketplace-button-bg",
+      "value": "#474747"
+    }
+  ],
+  "Gradients": [],
+  "BorderRadiuses": [
+    {
+      "name": "regular",
+      "value": "15px"
+    },
+    {
+      "name": "small",
+      "value": "10px"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "dont-use-this",
+      "fontFamily": "Roboto"
+    },
+    {
+      "name": "chakra-petch-600",
+      "fontFamily": "Chakra Petch"
+    },
+    {
+      "name": "chakra-petch-500",
+      "fontFamily": "Chakra Petch"
+    },
+    {
+      "name": "chakra-petch-700",
+      "fontFamily": "Chakra Petch"
+    },
+    {
+      "name": "chakra-petch-regular",
+      "fontFamily": "Chakra Petch"
+    },
+    {
+      "name": "chakra-petch-regular",
+      "fontFamily": "Chakra Petch"
+    }
+  ],
+  "typeStyles": [
+    {
+      "name": "display-1",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "45px",
+      "lineHeight": "54px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "display-2",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "37px",
+      "lineHeight": "45px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "h-1",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "31px",
+      "lineHeight": "38px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "h-2",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "26px",
+      "lineHeight": "33px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "h-3",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "22px",
+      "lineHeight": "28px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "h-4",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "h-5",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "15px",
+      "lineHeight": "21px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "body",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "15px",
+      "lineHeight": "21px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "small",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "x-small",
+      "fontFamily": "Roboto",
+      "fontSize": "10px",
+      "lineHeight": "15px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "chakra-petch-13",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "0em"
+    },
+    {
+      "name": "chakra-petch-16",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "0em"
+    },
+    {
+      "name": "chakra-petch-15",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "15px",
+      "lineHeight": "21px",
+      "letterSpacing": "0.03em"
+    },
+    {
+      "name": "chakra-petch-40",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "40px",
+      "lineHeight": "55px",
+      "letterSpacing": "0.03em"
+    },
+    {
+      "name": "chakra-petch-18",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "letterSpacing": "0.30000001192092896px"
+    },
+    {
+      "name": "chakra-petch-13",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "0em"
+    },
+    {
+      "name": "chakra-petch-16",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "16px",
+      "lineHeight": "20px",
+      "letterSpacing": "0em"
+    },
+    {
+      "name": "chakra-petch-64",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "64px",
+      "lineHeight": "65px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "chakra-petch-24",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "24px",
+      "lineHeight": "28px",
+      "letterSpacing": "0.1em"
+    },
+    {
+      "name": "chakra-petch-regular-12",
+      "fontFamily": "Chakra Petch",
+      "fontSize": "12px",
+      "lineHeight": "15px",
+      "letterSpacing": "0.1em"
+    }
+  ],
+  "SpacePatterns": [
+    {
+      "name": "none",
+      "value": "0px"
+    },
+    {
+      "name": "xx-small",
+      "value": "7px"
+    },
+    {
+      "name": "x-small",
+      "value": "11px"
+    },
+    {
+      "name": "small",
+      "value": "16px"
+    },
+    {
+      "name": "regular",
+      "value": "24px"
+    },
+    {
+      "name": "large",
+      "value": "36px"
+    },
+    {
+      "name": "x-large",
+      "value": "54px"
+    },
+    {
+      "name": "xx-large",
+      "value": "81px"
+    },
+    {
+      "name": "xxx-small",
+      "value": "5px"
+    },
+    {
+      "name": "xxx-large",
+      "value": "122px"
+    }
+  ],
+  "Icons": [
+    {
+      "name": "logo",
+      "value": "url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA1NSA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICA8ZyBpZD0iR3JvdXAiPgogICAgICA8ZyBpZD0iR3JvdXBfMiI+CiAgICAgICAgPGcgaWQ9Ikdyb3VwXzMiPgogICAgICAgICAgPHBhdGggaWQ9IlZlY3RvciIgZD0iTTI1LjYxNjcgMTMuNzc2NEw3LjQyODIyIDE3LjYyMjJMMjIuMTc5MiAyNS4yMDg0TDI1LjYxNjcgMTMuNzc2NFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8xMzlfOTU4MykiIC8+CiAgICAgICAgICA8cGF0aCBpZD0iVmVjdG9yXzIiIGQ9Ik0zMi44ODY4IDM1Ljk2ODdMMjIuMTc5MiAyNS4yMDg0TDI3LjU2NTkgNDEuMzAyN0wzMi44ODY4IDM1Ljk2ODdaIiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXJfMTM5Xzk1ODMpIiAvPgogICAgICAgICAgPHBhdGggaWQ9IlZlY3Rvcl8zIiBkPSJNMCAxMy43NzY0TDcuNDI4MTYgMTcuNjIyMkwyNS42MTY2IDEzLjc3NjRIMFoiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcl8xMzlfOTU4MykiIC8+CiAgICAgICAgICA8cGF0aCBpZD0iVmVjdG9yXzQiIGQ9Ik03LjQyODE2IDE3LjYyMjJMMCAxMy43NzY0TDI3LjU2NTkgNDEuMzAyN0wyMi4xNzkxIDI1LjIwODRMNy40MjgxNiAxNy42MjIyWiIgZmlsbD0idXJsKCNwYWludDNfbGluZWFyXzEzOV85NTgzKSIgLz4KICAgICAgICAgIDxwYXRoIGlkPSJWZWN0b3JfNSIgZD0iTTMzLjU3MTcgMTMuNzc2NEgyNS42MTY3TDIyLjE3OTIgMjUuMjA4NEwzMy41NzE3IDEzLjc3NjRaIiBmaWxsPSJ1cmwoI3BhaW50NF9saW5lYXJfMTM5Xzk1ODMpIiAvPgogICAgICAgICAgPHBhdGggaWQ9IlZlY3Rvcl82IiBkPSJNMTMuNzIzNiAwTDM3LjI4NTcgNi44NzVMNDEuMjYzMSAwSDEzLjcyMzZaIiBmaWxsPSJ1cmwoI3BhaW50NV9saW5lYXJfMTM5Xzk1ODMpIiAvPgogICAgICAgICAgPHBhdGggaWQ9IlZlY3Rvcl83IiBkPSJNMzIuODg2NyAyNS43MjJMMzguMDM2NCAzMC44MDU4TDU1IDEzLjc1TDMyLjg4NjcgMjUuNzIyWiIgZmlsbD0idXJsKCNwYWludDZfbGluZWFyXzEzOV85NTgzKSIgLz4KICAgICAgICAgIDxwYXRoIGlkPSJWZWN0b3JfOCIgZD0iTTEzLjcyMzcgMEw2LjkwMTM3IDYuODc1SDM3LjI4NTdMMTMuNzIzNyAwWiIgZmlsbD0idXJsKCNwYWludDdfbGluZWFyXzEzOV85NTgzKSIgLz4KICAgICAgICAgIDxwYXRoIGlkPSJWZWN0b3JfOSIgZD0iTTQ0LjUwMzEgMTQuMDY2MUw0MS4yNjMxIDBMMzcuMjg1NiA2Ljg3NUw0NC41MDMxIDE0LjA2NjFaIiBmaWxsPSJ1cmwoI3BhaW50OF9saW5lYXJfMTM5Xzk1ODMpIiAvPgogICAgICAgICAgPHBhdGggaWQ9IlZlY3Rvcl8xMCIgZD0iTTU1IDEzLjc1TDQxLjI2MzIgMEw0NC41MDMxIDE0LjA2NjFMMzIuODg2NyAyNS43MjJMNTUgMTMuNzVaIiBmaWxsPSJ1cmwoI3BhaW50OV9saW5lYXJfMTM5Xzk1ODMpIiAvPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xMzlfOTU4MyIgeDE9IjIwLjkxODEiIHkxPSIxMS41NDQiIHgyPSIxMS44NTAyIiB5Mj0iMjcuMjU2NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMTA1ODgyIiBzdG9wLWNvbG9yPSIjRkZDNjNCIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTcyNTQ5IiBzdG9wLWNvbG9yPSIjOTc2NTAzIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhcl8xMzlfOTU4MyIgeDE9IjI3LjQ4NjkiIHkxPSIyNS4xNTkiIHgyPSIyNy40ODY5IiB5Mj0iNDEuMTk0MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMTA1ODgyIiBzdG9wLWNvbG9yPSIjRkZDNjNCIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTcyNTQ5IiBzdG9wLWNvbG9yPSIjOTc2NTAzIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhcl8xMzlfOTU4MyIgeDE9IjMuNDA0NTciIHkxPSIxNy4yOTI5IiB4Mj0iMjguOTk0OSIgeTI9IjE3LjI5MjkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjEwNTg4MiIgc3RvcC1jb2xvcj0iI0ZGQzYzQiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjk3MjU0OSIgc3RvcC1jb2xvcj0iIzk3NjUwMyIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50M19saW5lYXJfMTM5Xzk1ODMiIHgxPSIyNC41Njk2IiB5MT0iNy4xNzc5NSIgeDI9IjguMDY2OTMiIHkyPSI0Mi4zMTY4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4xMDU4ODIiIHN0b3AtY29sb3I9IiNGRkM2M0IiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45NzI1NDkiIHN0b3AtY29sb3I9IiM5NzY1MDMiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDRfbGluZWFyXzEzOV85NTgzIiB4MT0iMTMuMzUxNyIgeTE9IjIwLjIwMzYiIHgyPSIzNS4wMTA2IiB5Mj0iMjAuMjAzNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMTA1ODgyIiBzdG9wLWNvbG9yPSIjRkZDNjNCIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTcyNTQ5IiBzdG9wLWNvbG9yPSIjOTc2NTAzIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQ1X2xpbmVhcl8xMzlfOTU4MyIgeDE9IjIxLjAwMzYiIHkxPSItMy4wNzIwMiIgeDI9IjMzLjgxMTkiIHkyPSI5LjczNjI5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4xMDU4ODIiIHN0b3AtY29sb3I9IiNGRkM2M0IiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45NzI1NDkiIHN0b3AtY29sb3I9IiM5NzY1MDMiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDZfbGluZWFyXzEzOV85NTgzIiB4MT0iMzIuODU3MSIgeTE9IjIyLjIxODYiIHgyPSI1NC45Mzc0IiB5Mj0iMjIuMjE4NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMTA1ODgyIiBzdG9wLWNvbG9yPSIjRkZDNjNCIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTcyNTQ5IiBzdG9wLWNvbG9yPSIjOTc2NTAzIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQ3X2xpbmVhcl8xMzlfOTU4MyIgeDE9IjUuMjYxNjQiIHkxPSI0Ljc5NDA2IiB4Mj0iMjguOTU1NCIgeTI9IjQuNzk0MDYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjEwNTg4MiIgc3RvcC1jb2xvcj0iI0ZGQzYzQiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjk3MjU0OSIgc3RvcC1jb2xvcj0iIzk3NjUwMyIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50OF9saW5lYXJfMTM5Xzk1ODMiIHgxPSIzNy4yNjkyIiB5MT0iNy4wMDY3MSIgeDI9IjQ0LjQ2NjkiIHkyPSI3LjAwNjcxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4xMDU4ODIiIHN0b3AtY29sb3I9IiNGRkM2M0IiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45NzI1NDkiIHN0b3AtY29sb3I9IiM5NzY1MDMiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDlfbGluZWFyXzEzOV85NTgzIiB4MT0iNDUuOTY1IiB5MT0iNC41MDQzMSIgeDI9IjQ1Ljk2NSIgeTI9IjIzLjYwMTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjEwNTg4MiIgc3RvcC1jb2xvcj0iI0ZGQzYzQiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjk3MjU0OSIgc3RvcC1jb2xvcj0iIzk3NjUwMyIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgo8L3N2Zz4=)"
+    }
+  ]
+}

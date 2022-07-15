@@ -2,7 +2,6 @@ import { ChangeEvent, Dispatch, SetStateAction } from "react";
 import { CHAIN_CONFIG, CHAIN_CONFIG_TYPE } from "../config/chainConfig";
 import { WEB3AUTH_NETWORK, WEB3AUTH_NETWORK_TYPE } from "../config/web3AuthNetwork";
 import { useStore } from "../store";
-import styles from "../styles/Home.module.css";
 
 interface IProps {
   setNetwork: Dispatch<SetStateAction<WEB3AUTH_NETWORK_TYPE>>;
@@ -24,10 +23,10 @@ const Setting = ({ setNetwork, setChain }: IProps) => {
   const isLoggedIn = provider !== null;
 
   return (
-    <div className={styles.setting}>
-      <div className={styles.row}>
-        <label htmlFor="network" className={styles.label}>Web3Auth Network</label>
-        <select id="network" onChange={networkChangeHandler} className={styles.select} disabled={isLoggedIn}>
+    <div>
+      <div>
+        <label htmlFor="network">Web3Auth Network</label>
+        <select id="network" onChange={networkChangeHandler} disabled={isLoggedIn}>
           {Object.keys(WEB3AUTH_NETWORK).map((x: string) => {
             return (
               <option key={x} value={x}>
@@ -37,9 +36,9 @@ const Setting = ({ setNetwork, setChain }: IProps) => {
           })}
         </select>
       </div>
-      <div className={styles.row}>
-        <label htmlFor="network" className={styles.label}>Blockchain</label>
-        <select onChange={chainChangeHandler} className={styles.select} disabled={isLoggedIn}>
+      <div>
+        <label htmlFor="network">Blockchain</label>
+        <select onChange={chainChangeHandler} disabled={isLoggedIn}>
           {Object.keys(CHAIN_CONFIG).map((x: string) => {
             return (
               <option key={x} value={x}>

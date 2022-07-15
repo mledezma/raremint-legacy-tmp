@@ -5,6 +5,8 @@ import React, { useEffect } from 'react'
 import { isBrowser } from '~/library/utils'
 
 // initialize web3auth on first page load
+// NOTE: we are only using zustand on the client side for sharing state between components and ease optimistic ui updates. 
+//       we are not doing any hydration of the store from the server as in here. https://bit.ly/3uSGsm . its not necessary at the moment.
 if (isBrowser && !useStore.getState().zustand_initialized) {
   useStore.setState({
     zustand_initialized: true,

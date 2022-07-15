@@ -1,8 +1,8 @@
 
-import { useStore } from '../store'
+import { useStore } from '~/store'
 
 
-const Main = () => {
+export const Web3AuthActions = () => {
   const { web3authLogin, web3authLogout, web3authGetUserInfo, web3authGetAccounts, web3authGetBalance, web3authSignMessage, web3authSignTransaction, web3authSignAndSendTransaction, web3auth } = useStore();
 
   const loggedInView = (
@@ -41,5 +41,3 @@ const Main = () => {
   return <div>{web3auth?.provider ? loggedInView : unloggedInView}</div>;
 };
 
-
-export default Main;

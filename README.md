@@ -6,4 +6,4 @@ NextJS POC with Web3Auth.
   - see `./store/web3auth-store.ts`
 - No bundling issues, Dev are more familiar and comfy with next.
 - All TypeScript works fine. 
-- We still keep good perf metrics.
+- We still keep good perf metrics, bundling is not the most important thing.

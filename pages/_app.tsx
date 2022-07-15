@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         zustand_initialized: true,
         zustand_init_time: new Date(),
       })
-      useStore.getState().web3authInit()
       console.log('🗂 initialized zustand state')
+      useStore.getState().web3authInit()
     }
   })
   

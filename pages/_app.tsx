@@ -8,16 +8,19 @@ import React, { useEffect } from 'react'
 function MyApp({ Component, pageProps }: AppProps) {
   const location = useLocation()
     
-  // initialize zustand state
-  if (!useStore.getState().zustand_initialized) {
-    useStore.setState({
-      zustand_initialized: true,
-      zustand_init_time: new Date(),
-    })
-    useStore.getState().web3authInit()
-    console.log('🗂 initialized zustand state')
-  }
-
+  // initialize web3auth on first page load
+  useEffectOnce(()=> {
+    // initialize zustand state
+    if (!useStore.getState().zustand_initialized) {
+      useStore.setState({
+        zustand_initialized: true,
+        zustand_init_time: new Date(),
+      })
+      useStore.getState().web3authInit()
+      console.log('🗂 initialized zustand state')
+    }
+  })
+  
   // update the eth price every time you change url
   useEffect(() => {
     useStore.getState().syncEthPrice()

@@ -12,6 +12,7 @@ import _ from 'lodash'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useStore } from '~/store'
 import { Image } from '~/components/primitives/Image'
+import { useRouter } from 'next/router'
 
 const StyledDesktopNav = styled('nav', {
   px: '$small',
@@ -24,6 +25,7 @@ const StyledDesktopNav = styled('nav', {
     display: 'flex',
   },
 })
+
 const LinkSubNav = styled(motion.div, {
   position: 'relative',
   display: 'flex',
@@ -32,13 +34,14 @@ const LinkSubNav = styled(motion.div, {
   height: 40,
   width: 'max-content',
   ml: '$regular',
-  // cursor: 'pointer',
 })
+
 const LinkComponent = styled(NavLink, {
   '&:hover, &:focus': {
     color: '$nav-bar-submenu-rollover',
   },
 })
+
 const LinkIconWrapper = styled('div', {
   display: 'flex',
   alignItems: 'center',
@@ -76,6 +79,7 @@ const animation_props = {
     opacity: 0,
   },
 }
+
 const active_style = {
   color: 'var(--colors-nav-bar-submenu-rollover)',
 }
@@ -83,15 +87,16 @@ const active_style = {
 const DesktopNavLink: React.FC<NavOption> = ({ label, Icon, options, to, nav_key }) => {
   const { active_nav_key, setActiveNavKey, user } = useStore()
   const active_nav = nav_key === active_nav_key
+  const router = useRouter()
+  const currentRoute = router.pathname
 
   return (
     <LinkSubNav key={`link-sub-nav-${nav_key}-${to}`}>
       {to ? (
         <LinkComponent
           href={to}
-          // ToDo: Fix this
           onClick={() => setActiveNavKey(nav_key)}
-          // style={({ isActive }) => (isActive ? active_style : undefined)}
+          style={currentRoute === to ? active_style : undefined}
         >
           {label}
         </LinkComponent>
@@ -151,7 +156,7 @@ const DesktopNavLink: React.FC<NavOption> = ({ label, Icon, options, to, nav_key
                     href={to}
                     key={`desktop-link-to-${to}`}
                     onClick={() => setActiveNavKey(null)}
-                    style={({ isActive }) => (isActive ? active_style : undefined)}
+                    style={currentRoute === to ? active_style : undefined}
                     css={{
                       color: '$navbar-submenu-inactive',
                       display: 'block',

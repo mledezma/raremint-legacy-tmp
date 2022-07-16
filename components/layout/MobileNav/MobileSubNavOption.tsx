@@ -2,7 +2,7 @@ import NextLink from 'next/link';
 import { useStore } from '~/store'
 import { styled } from '~/styles/stitches.config'
 
-const MobileSubNavOptionLink = styled(NextLink, {
+const MobileSubNavOptionLink = styled('a', {
   display: 'flex',
   alignItems: 'center',
   borderBottom: '1px solid $submenu-item-divider-line',
@@ -25,12 +25,11 @@ export interface MobileSubNavOptionProps {
 export const MobileSubNavOption = ({ to, text }: MobileSubNavOptionProps) => {
   const { toggleMobileMenu } = useStore()
   return (
-    <MobileSubNavOptionLink
+    <NextLink
       href={to}
       key={`mobile-link-to-${to}`}
-      onClick={() => toggleMobileMenu(false)}
     >
-      {text}
-    </MobileSubNavOptionLink>
+      <MobileSubNavOptionLink onClick={() => toggleMobileMenu(false)}>{text}</MobileSubNavOptionLink>
+    </NextLink>
   )
 }

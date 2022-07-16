@@ -37,12 +37,6 @@ const StyledBox = styled(Box, {
   gap: '$small',
 })
 
-const WalletConnectButton = styled(Button, {
-  // display: 'none',
-  // '@small-min': {
-  //   display: 'flex',
-  // },
-})
 export interface WalletConnectorProps {
   redirect_to?: string
   hide_title?: boolean
@@ -56,8 +50,8 @@ export const WalletConnector = ({ redirect_to, hide_title }: WalletConnectorProp
       {!hide_title ? <h2>Connect your wallet.</h2> : null}
       <Text variant="flat">
         To sign back in, please connect to RareMint with one of our wallet providers. You can still
-        browse our collectibles while signed out. By connecting your wallet, you agree to RareMint's{' '}
-        <Link prefetch={false} href={routes.terms}>
+        browse our collectibles while signed out. By connecting your wallet, you agree to RareMint&apos;s{' '}
+        <Link href={routes.terms}>
           Terms of Service
         </Link>
       </Text>
@@ -70,7 +64,7 @@ export const WalletConnector = ({ redirect_to, hide_title }: WalletConnectorProp
             variant="secondary"
             onClick={() => login('metamask', redirect_to_value)}
           />
-          <WalletConnectButton
+          <Button
             key="walletconnect-login-button"
             icon={<WalletconnectIcon />}
             text="WalletConnect"

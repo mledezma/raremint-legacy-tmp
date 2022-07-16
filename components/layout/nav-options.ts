@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { routes } from '~/library/routes'
 import { MyAccountIcon, MyInventoryIcon, MyWalletIcon } from '../icons'
 import { NavWallet } from './NavWallet'
@@ -8,7 +8,7 @@ export type NavOptionKeys = 'marketplace' | 'learn' | 'mint' | 'inventory' | 'ac
 export interface SubNavOption {
   to: string
   text: string
-  Component?: React.FC
+  Component?: ReactNode
 }
 
 export interface NavOption {

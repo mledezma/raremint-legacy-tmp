@@ -2,6 +2,7 @@ import React from 'react'
 import { useStore } from '~/store'
 import { NavOption } from '../../nav-options'
 import { MobileSubNavMenu } from '../MobileSubNavMenu'
+import NextLink from 'next/link';
 import {
   MobileSubNavTogglerLabel,
   MobileNavOptionContainer,
@@ -15,13 +16,11 @@ import { Box } from '~/components/primitives/Box'
 const MobileNavFirstLevelOption = ({ label, to }: Pick<NavOption, 'label' | 'to'>) => {
   const { toggleMobileMenu } = useStore()
   return (
-    <MobileNavRemixLink
-      href={to!}
-      key={`mobile-link-to-${to}`}
-      onClick={() => toggleMobileMenu(false)}
-    >
-      {label}
-    </MobileNavRemixLink>
+    <NextLink href={to!} key={`mobile-link-to-${to}`}>
+      <MobileNavRemixLink onClick={() => toggleMobileMenu(false)}>
+        {label}
+      </MobileNavRemixLink>
+    </NextLink>
   )
 }
 

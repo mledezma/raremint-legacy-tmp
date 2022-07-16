@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import { FiChevronRight } from 'react-icons/fi'
 import { styled } from '~/styles/stitches.config'
 
@@ -12,7 +11,7 @@ export const MobileNavOptionContainer = styled('div', {
   px: '$small',
 })
 
-export const MobileNavRemixLink = styled(NextLink, {
+export const MobileNavRemixLink = styled('a', {
   color: 'white',
   pt: 20,
   maxHeight: 60,

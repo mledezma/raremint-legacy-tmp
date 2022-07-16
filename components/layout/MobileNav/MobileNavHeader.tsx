@@ -26,7 +26,7 @@ export const MobileNavHeader = () => {
 
   return (
     <MobileNavHeaderStyled>
-      <MobileNavHomeLink href="/" onClick={() => show_mobile_menu && toggleMobileMenu(false)}>
+      <MobileNavHomeLink href="/" onClick={() => show_mobile_menu && toggleMobileMenu(false)} legacyBehavior={false}>
         <RaremintIcon width="50" height="50" />
       </MobileNavHomeLink>
       <NavIcon onClick={() => toggleMobileMenu()} />

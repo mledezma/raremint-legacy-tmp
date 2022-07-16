@@ -33,9 +33,6 @@ const VideoBox = styled('div', {
 })
 
 export const HeroSection = () => {
-  // const home_vide = isMobile
-  //   ? 'https://res.cloudinary.com/raremint/video/upload/v1655331252/application_assets/homepage_teaser_5_bupnt5.mp4'
-  //   : 'https://res.cloudinary.com/raremint/video/upload/q_100/v1655331252/application_assets/homepage_teaser_5_bupnt5.mp4'
   const home_vide =
     'https://res.cloudinary.com/raremint/video/upload/v1655331252/application_assets/homepage_teaser_5_bupnt5.mp4'
   return (
@@ -63,7 +60,6 @@ export const HeroSection = () => {
           corresponding physical asset in our safe and secure vault.
         </HeadingDescription>
         <HomeSectionLink
-          // to={routes.marketplace} ToDo
           href={routes.marketplace}
           css={{ pt: '$regular', fontSize: '$chakra-petch-18' }}
         >
@@ -91,14 +87,6 @@ export const HeroSection = () => {
             />
             <Image src="https://res.cloudinary.com/raremint/video/upload/v1655331252/application_assets/homepage_teaser_5_bupnt5.jpg" layout="fill" alt="Home Teaser"/>
           </video>
-          {/* <AdvancedVideo
-            preload=""
-            autoPlay
-            loop
-            muted
-            playsInline
-            cldVid={getCloudinaryAppVideo('homepage_teaser_5_bupnt5')}
-          /> */}
         </VideoBox>
       </HeroAsset>
     </HeroContainer>

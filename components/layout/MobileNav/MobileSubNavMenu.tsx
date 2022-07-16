@@ -61,7 +61,7 @@ export const MobileSubNavMenu = (nav_option: NavOption) => {
           css={isWalletNav ? wallet_nav_wrapper : undefined}
           {...mobile_subnav_menu_animation_props}
         >
-          {nav_option.options?.map(({ Component, text, to }) => {
+          {nav_option.options?.map(({ Component, text, to }, idx) => {
             const WalletComponent =
               Component && isWalletNav && !text && !to ? (
                 //  TODO: It's from a restoration, please add my wrapper
@@ -95,7 +95,7 @@ export const MobileSubNavMenu = (nav_option: NavOption) => {
                 Component
               )
 
-            return Component ? WalletComponent : <MobileSubNavOption to={to} text={text} />
+            return Component ? WalletComponent : <MobileSubNavOption key={idx} to={to} text={text} />
           })}
         </MobileSubNavMenuMotion>
       ) : null}

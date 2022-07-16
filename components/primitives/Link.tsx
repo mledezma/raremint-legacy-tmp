@@ -1,12 +1,10 @@
-// import { Link as RemixLink, NavLink as RemixNavLink } from '@remix-run/react'
-// import type { RemixLinkProps, RemixNavLinkProps } from '@remix-run/react/components'
-import React, { ReactElement } from 'react'
+import React from 'react'
 import NextLink from 'next/link';
 import { styled } from '~/styles/stitches.config'
 
 interface NavProps {
   href: string
-  children: ReactElement
+  children: any
 }
 
 const CustomLink = styled('a', {
@@ -21,8 +19,8 @@ const CustomLink = styled('a', {
 export const Link = (props: React.RefAttributes<HTMLAnchorElement> & NavProps) => {
   const internal = /^\/(?!\/)/.test(props.href);
   return internal ? (
-    <NextLink {...props} passHref>
-      <CustomLink>
+    <NextLink href={props.href} passHref>
+      <CustomLink {...props}>
         {props.children}
       </CustomLink>
     </NextLink>

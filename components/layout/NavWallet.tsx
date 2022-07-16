@@ -1,4 +1,3 @@
-// ToDo: fix this
 import { useStore } from '~/store'
 import { WalletCard } from '~/components/shared/WalletCard'
 import { WalletConnector } from '../shared/WalletConnector'

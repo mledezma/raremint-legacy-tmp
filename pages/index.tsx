@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { Backers } from "~/components/pages/home/Backers";
 import { BigCardSection } from "~/components/pages/home/BigCards";
 import { DropSection } from "~/components/pages/home/DropSection";
@@ -9,6 +8,16 @@ import { Box } from "~/components/primitives/Box";
 import { Container } from "~/components/primitives/Container";
 import { Flex } from "~/components/primitives/Flex";
 import { StepsCard } from "~/components/shared/StepsCard";
+import { getAssetsInCollection, getHomepageData } from '~/services/prisma.server'
+import { butterService } from '~/services/butter.server'
+import type { NextPage } from "next";
+import type { Asset } from '~/types'
+import safeJsonStringify from 'safe-json-stringify';
+
+type HomepageData = {
+  latest_releases: Asset[]
+  home_post_list: any[]
+}
 
 const formula_data = [
   {
@@ -41,31 +50,53 @@ const HomeBackersNews = ({ home_post_list }: any) => (
     }}
   >
     <Backers />
-    {/* <Posts home_post_list={home_post_list} /> */}
+    <Posts home_post_list={home_post_list} />
   </Flex>
 )
 
-const Home: NextPage = ({ latest_releases, home_post_list }) => {
+const Home: NextPage<HomepageData> = ({ latest_releases, home_post_list }) => {
   return (
     <Container>
       <HomeSection css={{ '@regular-max': { mt: '$x-large' } }} component={<HeroSection />} />
       <HomeSection component={<StepsCard cards_data={formula_data} title="The Formula" />} />
       <HomeSection component={<DropSection />} />
       <HomeSection component={<BigCardSection />} />
-      {/* <HomeSection component={<LatestReleases latest_releases={latest_releases} />} /> ToDo: display when auth is ready */}
+      <HomeSection component={<LatestReleases latest_releases={latest_releases} />} />
       <HomeSection component={<HomeBackersNews home_post_list={home_post_list} />} />
     </Container>
   )
 };
 
-
 export async function getStaticProps() {
-  //ToDo: add the correct info when the auth is done.
+  // const user = await auth.isAuthenticated(request) ToDo: fix this when auth is ready
+  const user = null
+  const homepage = await getHomepageData()
+  if (!homepage) throw new Error('Error loading homepage data')
+  const latest_releases_uris = homepage.latest_releases as string[]
+  const popular_assets_uris = homepage.popular_assets as string[]
+
+  const [home_post_list, db_assets] = await Promise.all([
+    await butterService.getPostList(),
+    await getAssetsInCollection(
+      [homepage.hero_asset, ...latest_releases_uris, ...popular_assets_uris],
+      user?.address,
+    ),
+  ])
+
+  let latest_releases: Asset[] = []
+
+  db_assets.forEach((asset) => {
+    if (latest_releases_uris.includes(asset.asset_uri)) latest_releases.push(asset)
+  })
+
+  const stringifiedData = safeJsonStringify({
+    latest_releases,
+    home_post_list: home_post_list?.data,
+  });
+  const data = JSON.parse(stringifiedData);
+
   return {
-    props: {
-      latest_releases: '',
-      home_post_list: ''
-    }, // will be passed to the page component as props
+    props: data
   }
 }
 

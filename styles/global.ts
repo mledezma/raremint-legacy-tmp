@@ -4,7 +4,7 @@ export const global_css = `
     margin: 0;
     padding: 0;
     font-size: 14px;
-    background-image: url(images/background-mobile-gradient.svg);
+    background-image: url(./../images/background-mobile-gradient.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -15,7 +15,7 @@ export const global_css = `
 
   @media (min-width: 768px) {
     body {
-      background-image: url(images/background-gradient.svg);
+      background-image: url(./../images/background-gradient.svg);
     }
   }
 

@@ -27,7 +27,6 @@ export const StyledBaseButton = styled('button', {
   border: '1px solid none',
   textAlign: 'center',
   lineHeight: 1,
-  // TODO: transitions not working?
   transition: 'all 240ms ease-in-out',
 
   '&:disabled': {

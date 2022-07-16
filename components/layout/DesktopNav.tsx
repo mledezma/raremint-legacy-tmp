@@ -161,7 +161,6 @@ const DesktopNavLink: React.FC<NavOption> = ({ label, Icon, options, to, nav_key
                       color: '$navbar-submenu-inactive',
                       display: 'block',
                       borderBottom: '1px solid $submenu-item-divider-line',
-                      // TODO: add to scale 13 or 14px to it. To impr scale system
                       py: 13,
                       fontWeight: '$extra-bold',
                       '&:last-of-type': {

@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { styled } from '~/styles/stitches.config'
 
+interface Props {
+  children: React.ReactNode;
+}
+
 const TooltipWrapper = styled('div', {
   position: 'relative',
 })
@@ -23,11 +27,9 @@ const TooltipStyled = styled('div', {
     borderLeft: 'solid 5px transparent',
     borderRight: 'solid 5px transparent',
   },
-  // TODO: Position variants...
 })
 
-// TODO: Tooltip show animation
-export const Tooltip: React.FC = ({ children }) => (
+export const Tooltip: React.FC<Props> = ({ children }) => (
   <TooltipWrapper>
     <TooltipStyled>{children}</TooltipStyled>
   </TooltipWrapper>

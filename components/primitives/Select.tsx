@@ -1,0 +1,48 @@
+import { styled } from '~/styles/stitches.config'
+
+export const StyledSelect = styled('div', {
+  display: 'grid',
+  gridTemplateAreas: '"select"',
+  alignItems: 'center',
+  position: 'relative',
+  maxWidth: '300px',
+  minWidth: 225,
+  width: 'max-content',
+  fontSize: 15,
+  cursor: 'pointer',
+  lineHeight: 1.1,
+  '& select': {
+    backgroundColor: '$dropdown-bg-button-color',
+    borderRadius: 5,
+    color: '$dropdown-text-color',
+    border: 'none',
+    fontFamily: 'inherit',
+    fontSize: 'inherit',
+    fontWeight: 700,
+    cursor: 'inherit',
+    lineHeight: 'inherit',
+    zIndex: 1,
+    outline: 'none',
+    WebkitAppearance: 'none',
+    MozAppearance: 'none',
+    appearance: 'none',
+    pl: 18,
+    pr: 36,
+    py: 18,
+    position: 'relative',
+  },
+  '&:after': {
+    content: '""',
+    background:
+      "url(\"data:image/svg+xml,<svg viewBox='0 0 21 13' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M10.12 12.8333L20.24 2.67667L17.5633 0L10.12 7.40667L2.67667 0L0 2.71333L10.12 12.8333Z' fill='%23C1C0C0'/></svg>\") no-repeat",
+    height: 12,
+    width: 18,
+    position: 'absolute',
+    right: 0,
+    top: '50%',
+    transform: 'translateY(-50%)',
+    zIndex: 2,
+    mr: 16
+  },
+  '& select::-ms-expand': { display: 'none' },
+})

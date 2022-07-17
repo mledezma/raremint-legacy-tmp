@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useEffectOnce } from 'react-use'
-import { Spinner } from '~/components/shared/Spinner'
+import { CloseIcon, MoonPayIcon } from '~/components/icons'
 import { Box } from '~/components/primitives/Box'
 import { Button } from '~/components/primitives/Button'
 import { Flex } from '~/components/primitives/Flex'
 import { Text } from '~/components/primitives/Text'
-import { CloseIcon, MoonPayIcon } from '~/components/icons'
 import { useStore } from '~/store'
 
 type MoonPayProps = {

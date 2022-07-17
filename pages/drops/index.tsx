@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+
 // import type { LoaderFunction } from '@remix-run/node'
 // import { json } from '@remix-run/node'
 import type { Asset } from '~/types'
@@ -253,6 +253,7 @@ export default function Drops() {
   return (
     <>
       {/* TODO !important: change this layout to the one in router/pass */}
+      {/* TODO: Review the rehidratation error. */}
       <Container css={{ mb: '$xx-large', '@regular-min': { px: '$x-large' } }} max="large">
         <PassInfo
           title={`Feeling Lucky? Rip open a $28,800 Charizard.`}

@@ -31,7 +31,7 @@ const getEthereumCredentialsProvider = () => {
   }
 
   return {
-    name: "Ethereum",
+    name: 'Ethereum',
     authorize,
     type: 'credentials',
     credentials: {},

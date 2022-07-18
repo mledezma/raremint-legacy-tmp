@@ -24,7 +24,7 @@ export type AppUser = {
   usd_balance: Decimal
   chain_id: number
   avatar?: string | null
-} | null
+}
 
 export type AppSearchOption = {
   text: string

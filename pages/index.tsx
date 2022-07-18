@@ -13,6 +13,9 @@ import { butterService } from '~/services/butter.server'
 import type { NextPage } from "next";
 import type { Asset } from '~/types'
 import safeJsonStringify from 'safe-json-stringify';
+import { auth } from '~/session/auth.server'
+import { authOptions } from '~/pages/api/auth/[...nextauth]'
+import { unstable_getServerSession } from "next-auth/next"
 
 type HomepageData = {
   latest_releases: Asset[]
@@ -55,6 +58,7 @@ const HomeBackersNews = ({ home_post_list }: any) => (
 )
 
 const Home: NextPage<HomepageData> = ({ latest_releases, home_post_list }) => {
+
   return (
     <Container>
       <HomeSection css={{ '@regular-max': { mt: '$x-large' } }} component={<HeroSection />} />
@@ -67,9 +71,10 @@ const Home: NextPage<HomepageData> = ({ latest_releases, home_post_list }) => {
   )
 };
 
-export async function getStaticProps() {
-  // const user = await auth.isAuthenticated(request) ToDo: fix this when auth is ready
-  const user = null
+export async function getServerSideProps(context) {
+  const session = await unstable_getServerSession(context.req, context.res, authOptions)
+  console.log('session', session)
+  const user = await auth.isAuthenticated()
   const homepage = await getHomepageData()
   if (!homepage) throw new Error('Error loading homepage data')
   const latest_releases_uris = homepage.latest_releases as string[]
@@ -93,6 +98,7 @@ export async function getStaticProps() {
     latest_releases,
     home_post_list: home_post_list?.data,
   });
+
   const data = JSON.parse(stringifiedData);
 
   return {

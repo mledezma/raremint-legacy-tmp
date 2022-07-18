@@ -4,6 +4,7 @@ import { useLocation } from 'react-use'
 import React, { useEffect } from 'react'
 import { isBrowser } from '~/library/utils'
 import { Layout } from '~/components/layout/Layout'
+import { SessionProvider } from "next-auth/react"
 
 // NOTE: we are only using zustand on the client side for sharing state between components and ease optimistic ui updates.
 //       we are not doing any hydration of the store from the server as in here. https://bit.ly/3uSGsm . its not necessary at the moment.
@@ -18,7 +19,10 @@ if (isBrowser && !useStore.getState().zustand_initialized) {
 }
 
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   const location = useLocation()
   const store = useStore()
 
@@ -33,9 +37,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [store])
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <SessionProvider session={session}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
   )
 }
 

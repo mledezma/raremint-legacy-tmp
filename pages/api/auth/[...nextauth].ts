@@ -2,36 +2,39 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthOptions } from 'next-auth'
 import type { AppUser } from '~/types'
-import { ethers } from 'ethers';
+import { utils } from 'ethers';
+import Decimal from 'decimal.js';
 
 const getEthereumCredentialsProvider = () => {
-  const user: AppUser = {
-    login_strategy: 'ethereum',
-    address: '',
-    network: '',
-    eth_balance: '',
-    usd_balance: '',
-    chain_id: '',
-    avatar:  '',
-  }
-
-  const authorize = async (credentials: any, f) => {
+  const authorize = async (credentials: any) => {
     const { address, signature, message, eth_balance, chain_id } = credentials
-    if (!address || !signature || !message)
-      throw new Error('Invalid Ethereum request');
-    const signerAddr = ethers.utils.verifyMessage(message, signature)
-    if (signerAddr !== address) throw new Error('Invalid signature')
 
-    return {
-      id: 1,
-      name: "J Smith",
-      email: "jsmith@example.com",
-      image: "https://i.pravatar.cc/150?u=jsmith@example.com",
+    console.log('credentials', credentials)
+    console.log('address', address)
+    console.log('signature', signature)
+    console.log('message', message)
+    console.log('eth_balance', eth_balance)
+    console.log('chain_id', chain_id)
+    // const nonce = '0x' + credentials.csrfToken;
+    // const address = utils.verifyMessage(nonce, credentials.signature);
+    // if (address.toLowerCase() !== credentials.address?.toLowerCase()) return null;
+    // //  create newUser or return existent user
+    // const user = { id: 1, name: 'J Smith', email: 'jsmith@example.com', ...credentials };
+    const user: AppUser = {
+      login_strategy: 'metamask',
+      address: 'test adress',
+      chain_id: 0,
+      network: '',
+      eth_balance: new Decimal(0),
+      usd_balance: new Decimal(0),
+      avatar: 'img',
     }
+
+    return user;
   }
 
   return {
-    name: 'Ethereum',
+    name: 'ethereum',
     authorize,
     type: 'credentials',
     credentials: {},

@@ -3,6 +3,7 @@ import type { CustomChainConfig } from '@web3auth/base'
 import type { Web3Auth } from '@web3auth/web3auth'
 import type { SetState } from 'zustand'
 import { ADAPTER_EVENTS } from '@web3auth/base'
+import { signIn, signOut } from "next-auth/react"
 
 export const web3auth_chain_config = {
   mainnet: {
@@ -41,7 +42,7 @@ export const web3auth_chain_config = {
     ticker: 'matic',
     tickerName: 'Matic',
   } as CustomChainConfig,
-} as const 
+} as const
 
 // export interface Web3AuthWalletProvider {
 //   getAccounts: () => Promise<any>
@@ -124,8 +125,14 @@ export const createWeb3AuthSlice: StoreSlice<Web3AuthStore> = (set, get) => ({
     set({ web3auth: web3auth })
     console.log('🔑 web3auth initialized!')
   },
-  web3authLogin: async () => get().web3auth.connect(),
-  web3authLogout: async () => {},
+  web3authLogin: async () => {
+    await get().web3auth.connect()
+    signIn('ethereum', { redirect: false, signature: 'signature', address: '0xtest' })
+  },
+  web3authLogout: async () => {
+    await get().web3auth.logout()
+    signOut()
+  },
   web3authGetUserInfo: async () => {},
   web3authGetAccounts: async () => {},
   web3authGetBalance: async () => {},
